@@ -3,10 +3,23 @@
 <p align="center">A very simple Selenium script to extend tasks on PythonAnywhere.</p>
 
 <p align="right"> 
-        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/><a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img align="right" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee"/></a><a href="https://github.com/sponsors/Prem-ium" target="_blank">
+        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img align="right" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee"/></a><a href="https://github.com/sponsors/Prem-ium" target="_blank">
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a>
 </p>
 
+## Installation
+This script can be used locally or using Docker.
+### Python
+Clone the repository & Install dependencies
+```bash
+  git clone https://github.com/Prem-ium/PythonAnywhere-ExtendTask.git
+  cd PythonAnywhere-ExtendTask
+  pip install -r requirements.txt
+```
+Finally, you're ready to run the script!
+```bash
+  python main.py
+```
 ## Enviornmental Variables
 - `LOGIN` - USERNAME:PASSWORD. PythonAnywhere login, seperated by ':'
 
