@@ -8,8 +8,6 @@
 </p>
 
 ## Installation
-This script can be used locally or using Docker.
-### Python
 Clone the repository & Install dependencies
 ```bash
   git clone https://github.com/Prem-ium/PythonAnywhere-ExtendTask.git
@@ -23,8 +21,52 @@ Finally, you're ready to run the script!
 ## Enviornmental Variables
 - `LOGIN` - USERNAME:PASSWORD. PythonAnywhere login, seperated by ':'
 
-## License
-This repository is using the [MIT](https://choosealicense.com/licenses/mit/) license.
+# Running Python Script on Windows and Linux Startup
+
+## Windows
+
+To schedule the execution of a Python script on Windows every time the system boots, you can use the Task Scheduler. Follow these steps:
+
+1. **Open Task Scheduler:** Press `Win + S`, type "Task Scheduler," and select it from the search results.
+
+2. **Create a Basic Task:**
+   - Click on "Create Basic Task" in the right-hand menu.
+   - Follow the wizard to set a name and description for your task.
+
+3. **Trigger Settings:**
+   - Choose the "When the computer starts" trigger option.
+
+4. **Action Settings:**
+   - Select "Start a program" as the action.
+   - Browse and select the Python executable (e.g., `python.exe`) as the program/script.
+   - In the "Add arguments" field, provide the path to your Python script (e.g., `C:\path\to\your\script.py`).
+
+5. **Finish:**
+   - Review your settings and complete the wizard.
+
+Your Python script will now run every time the Windows system starts.
+
+## Linux
+
+To schedule the execution of a Python script on Linux during boot, you can use `cron`. Follow these steps:
+
+1. **Open the Crontab Editor:**
+   - Open a terminal.
+   - Type `crontab -e` to edit the crontab file.
+
+2. **Add a Cron Job:**
+   - In the editor, add the following line to run your Python script at boot:
+     ```
+     @reboot /path/to/python3 /path/to/your/script.py
+     ```
+     Replace `/path/to/python3` with the path to your Python interpreter (use `which python3` to find it) and `/path/to/your/script.py` with the path to your Python script.
+
+3. **Save and Exit:**
+   - Save the changes and exit the crontab editor.
+
+Now, your Python script will be executed every time the Linux system boots up.
+
+Note: Ensure that your Python script has the necessary permissions to run and that any required dependencies are available.
 
 ## Donations
 1. **GitHub Sponsors**
@@ -35,3 +77,6 @@ This repository is using the [MIT](https://choosealicense.com/licenses/mit/) lic
 2. **Buy Me A Coffee**
    - [Donate via Buy Me A Coffee](https://www.buymeacoffee.com/prem.ium)
    - [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/prem.ium)
+
+## License
+This repository is using the [MIT](https://choosealicense.com/licenses/mit/) license.
