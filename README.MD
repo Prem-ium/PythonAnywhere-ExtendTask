@@ -21,11 +21,10 @@ Finally, you're ready to run the script!
 ## Enviornmental Variables
 - `LOGIN` - USERNAME:PASSWORD. PythonAnywhere login, seperated by ':'
 
-# Running Python Script on Windows and Linux Startup
-
+# Scheduling Python Script Weekly on Windows and Linux Startup
 ## Windows
 
-To schedule the execution of a Python script on Windows every time the system boots, you can use the Task Scheduler. Follow these steps:
+To schedule the execution of a Python script on Windows every week when the system boots, you can use the Task Scheduler. Follow these steps:
 
 1. **Open Task Scheduler:** Press `Win + S`, type "Task Scheduler," and select it from the search results.
 
@@ -34,7 +33,8 @@ To schedule the execution of a Python script on Windows every time the system bo
    - Follow the wizard to set a name and description for your task.
 
 3. **Trigger Settings:**
-   - Choose the "When the computer starts" trigger option.
+   - Choose the "Weekly" trigger option.
+   - Set the day and time you want the script to run each week.
 
 4. **Action Settings:**
    - Select "Start a program" as the action.
@@ -44,18 +44,18 @@ To schedule the execution of a Python script on Windows every time the system bo
 5. **Finish:**
    - Review your settings and complete the wizard.
 
-Your Python script will now run every time the Windows system starts.
+Your Python script will now run every week at the specified day and time when the Windows system starts.
 
 ## Linux
 
-To schedule the execution of a Python script on Linux during boot, you can use `cron`. Follow these steps:
+To schedule the execution of a Python script on Linux every week during boot, you can use `cron`. Follow these steps:
 
 1. **Open the Crontab Editor:**
    - Open a terminal.
    - Type `crontab -e` to edit the crontab file.
 
-2. **Add a Cron Job:**
-   - In the editor, add the following line to run your Python script at boot:
+2. **Add a Weekly Cron Job:**
+   - In the editor, add the following line to run your Python script every week at boot:
      ```
      @reboot /path/to/python3 /path/to/your/script.py
      ```
@@ -64,7 +64,7 @@ To schedule the execution of a Python script on Linux during boot, you can use `
 3. **Save and Exit:**
    - Save the changes and exit the crontab editor.
 
-Now, your Python script will be executed every time the Linux system boots up.
+Now, your Python script will be executed every week when the Linux system boots up.
 
 Note: Ensure that your Python script has the necessary permissions to run and that any required dependencies are available.
 
