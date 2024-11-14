@@ -15,7 +15,7 @@ def getDriver():
     chrome_options.add_argument('--headless')
     try:
         driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager(cache_valid_range=30).install()),
+            service=Service(ChromeDriverManager().install()),
             options=chrome_options)
     except Exception as e:
         driver = webdriver.Chrome(options=chrome_options)
@@ -33,7 +33,7 @@ def main():
     driver.find_element(By.XPATH, value='//*[@id="id_next"]').click()
 
     driver.get(f'https://www.pythonanywhere.com/user/{LOGIN[0]}/tasks_tab/')
-    time.sleep(5)
+    time.sleep(15)
     
     # Expand ten tasks, change the range to expand more or less
     for i in range(1, 11):
