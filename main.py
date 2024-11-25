@@ -40,9 +40,9 @@ def main():
         try:
             driver.find_element(By.XPATH, value=f'//*[@id="id_scheduled_tasks_table"]/div/div/table/tbody/tr[{i}]/td[6]/button[4]').click()
         except Exception as e:
-            print(f'{i-1} tasks were found & extended.\n')
-            break
+            driver.quit()
+            print(f'{i-1} tasks were found & extended.')
+            return
     driver.quit()
-
 if __name__ == '__main__':
     main()
