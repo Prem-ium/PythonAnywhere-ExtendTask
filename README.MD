@@ -1,9 +1,9 @@
 <h1 align="center">📊 PythonAnywhere Task Extension Automation 🤖 </h1>
 
-<p align="center">A very simple Selenium script to extend tasks on PythonAnywhere.</p>
+<p align="center">A very simple Selenium script to extend tasks on multiple PythonAnywhere account(s).</p>
 
 <p align="right"> 
-        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img align="right" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee"/></a><a href="https://github.com/sponsors/Prem-ium" target="_blank">
+        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a>
 </p>
 
@@ -19,9 +19,16 @@ Finally, you're ready to run the script!
   python main.py
 ```
 ## Enviornmental Variables
-- `LOGIN` - USERNAME:PASSWORD. PythonAnywhere login, seperated by ':'
 
-# Scheduling Python Script Weekly on Windows and Linux Startup
+- **`LOGIN`**:  
+  A string containing one or more PythonAnywhere login credentials, separated by commas (`,`). Each credential consists of a username and password, separated by a colon (`:`).  
+  Example:  
+  ```plaintext
+  LOGIN="USERNAME:PASSWORD,USERNAME2:PASSWORD2,ACCOUNT3:PASSWORD3"
+  ```
+
+
+# Scheduling Script Weekly on Windows and Linux Startup
 ## Windows
 
 To schedule the execution of a Python script on Windows every week when the system boots, you can use the Task Scheduler. Follow these steps:
@@ -77,6 +84,10 @@ Note: Ensure that your Python script has the necessary permissions to run and th
 2. **Buy Me A Coffee**
    - [Donate via Buy Me A Coffee](https://www.buymeacoffee.com/prem.ium)
    - [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/prem.ium)
+
+3. **Referral Links**  
+   - If you're unable to make a monetary donation, you can still support my work by using my curated [Referral Links](https://github.com/Prem-ium/Referral-Link-Me/blob/main/README.md). Earn bonuses and rewards while contributing to my projects at the same time.  
+   - [Explore Referral Links](https://github.com/Prem-ium/Referral-Link-Me/blob/main/README.md)  
 
 ## License
 This repository is using the [MIT](https://choosealicense.com/licenses/mit/) license.
