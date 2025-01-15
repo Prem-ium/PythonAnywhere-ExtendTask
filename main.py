@@ -13,7 +13,7 @@ def get_driver():
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    chrome_options.add_argument('--headless')
+    #chrome_options.add_argument('--headless')
     try:
         driver = webdriver.Chrome(
             service=Service(ChromeDriverManager().install()),
@@ -37,9 +37,11 @@ def main():
         driver.find_element(By.XPATH, value='//*[@id="id_auth-password"]').send_keys(creds[1])
         driver.find_element(By.XPATH, value='//*[@id="id_next"]').click()
 
+        time.sleep(5)
         # Enter Task Menu
-        driver.get(f'https://www.pythonanywhere.com/user/{LOGIN[0]}/tasks_tab/')
-        time.sleep(15)
+        driver.get(f'https://www.pythonanywhere.com/user/{creds[0]}/tasks_tab/')
+        
+        time.sleep(5)
         
         # Expand ten tasks, change the range to expand more or less
         for i in range(1, 15):
