@@ -30,20 +30,15 @@ def main():
         creds = log.split(':')
         print(f'Credentials Found for PythonAnywhere Account: {creds[0]}')
         driver = get_driver()
-
-        # Login to PythonAnywhere
         driver.get('https://www.pythonanywhere.com/login/')
         driver.find_element(By.XPATH, value='//*[@id="id_auth-username"]').send_keys(creds[0])
         driver.find_element(By.XPATH, value='//*[@id="id_auth-password"]').send_keys(creds[1])
         driver.find_element(By.XPATH, value='//*[@id="id_next"]').click()
 
         time.sleep(5)
-        # Enter Task Menu
         driver.get(f'https://www.pythonanywhere.com/user/{creds[0]}/tasks_tab/')
-        
         time.sleep(5)
         
-        # Expand ten tasks, change the range to expand more or less
         for i in range(1, 15):
             try:
                 driver.find_element(By.XPATH, value=f'//*[@id="id_scheduled_tasks_table"]/div/div/table/tbody/tr[{i}]/td[6]/button[4]').click()
